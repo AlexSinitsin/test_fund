@@ -60,9 +60,8 @@ const changeInput = () => {
     if(sub === b.toLowerCase()) {
       return true
     } else {
-      false
+      return false
     }
-    // a.username.toLowerCase().includes(b.toLowerCase())
   }))
 }
 const selectUser = (id) => {
@@ -75,41 +74,6 @@ onMounted(() => {
   store.dispatch('GET_USERS')
 })
 
-// export default {
-//   name: 'App',
-//   components: { ErrorModal, User },
-//   data() {
-//     return {
-//       notSearch: true,
-//       input: '',
-//       usersData: []
-//     }
-//   },
-//   computed: {
-//     notSearchComputed() {
-//       return this.notSearch
-//     },
-//     users() {
-//       return this.$store.getters.users
-//     },
-//     usersComputed() {
-//       return this.usersData
-//     }
-//   },
-//   methods: {
-//     changeInput() {
-//       this.notSearch = false
-//       const arr = this.input.split(', ')
-//       this.usersData = this.users.filter(a => arr.includes(a.username))
-//       console.log(this.usersData)
-//     },
-//   },
-//   mounted() {
-//     this.$store.dispatch('GET_USERS')
-//   }
-
-  
-// };
 </script>
 
 <style scoped lang="scss">
